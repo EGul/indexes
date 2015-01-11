@@ -18,12 +18,13 @@ function indexPathOf(arr, item) {
         result.forEach(function (e) {
           results.push(e);
         });
+        return results;
       }
     }
 
   }
 
-  return results;
+  return -1;
 }
 
 module.exports.indexPathOf = indexPathOf;
