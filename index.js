@@ -27,4 +27,18 @@ function indexPathOf(arr, item) {
   return -1;
 }
 
+function indexesOf(arr, item) {
+
+  var results = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == item) results.push(i);
+  }
+
+  if (!results.length) return -1;
+
+  return results;
+}
+
 module.exports.indexPathOf = indexPathOf;
+module.exports.indexesOf = indexesOf;
