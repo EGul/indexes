@@ -1,19 +1,17 @@
 
 function indexPathOf(arr, item) {
 
-  var results = [];
-
-  for (var i = 0; i < arr.length; i++) {
+  for (var i = 0, l = arr.length; i < l; i++) {
 
     if (!Array.isArray(arr[i])) {
       if (arr[i] == item) {
-        results.push(i);
-        return results;
+        return [i];
        }
     }
     else {
       var result = indexPathOf(arr[i], item);
       if (result.length > 0) {
+        var results = [];
         results.push(i);
         result.forEach(function (e) {
           results.push(e);
