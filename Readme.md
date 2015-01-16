@@ -20,6 +20,9 @@ Get index paths of item
 ###indexes(arr, item)
 Get indexes of item
 
+###setIndexPathOf(arr, path, item)
+Set index path to item
+
 ##Install
 ```
 npm install temp-name-here/indexes
