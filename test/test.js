@@ -88,4 +88,20 @@ describe('indexes', function () {
 
   });
 
+  describe('setIndexPathOf', function () {
+
+    it('should [1, 2, 3, [1, 2, [1, 10]]]', function () {
+
+      var tempArr = [1, 2, 3, [1, 2, [1, 5]]];
+      var path = [3, 2, 1];
+      var shouldArr = [1, 2, 3, [1, 2, [1, 10]]];
+
+      indexes.setIndexPathOf(tempArr, path, 10);
+
+      assert.deepEqual(shouldArr, tempArr);
+
+    });
+
+  });
+
 });
