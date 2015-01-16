@@ -87,6 +87,17 @@ function indexesOf(arr, item) {
   return results;
 }
 
+function setIndexPathOf(arr, path, item) {
+
+  for (var i = 0, l = path.length - 1; i < l; i++) {
+    arr = arr[path[i]];
+  }
+
+  arr[path[path.length - 1]] = item;
+
+}
+
 module.exports.indexPathOf = indexPathOf;
 module.exports.indexPathsOf = indexPathsOf;
 module.exports.indexesOf = indexesOf;
+module.exports.setIndexPathOf = setIndexPathOf;
