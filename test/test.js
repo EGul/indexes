@@ -104,4 +104,37 @@ describe('indexes', function () {
 
   });
 
+  describe('setIndexPathsOf', function () {
+
+    it('should [1, 10, 3, [1, 10, [1, 10]]]', function () {
+
+      var tempArr = [1, 2, 3, [1, 2, [1, 5]]];
+      //var paths = [[3, 2, 1], [3, 1], [1]];
+      var paths = [[1], [3, 1], [3, 2, 1]];
+      var items = 10;
+
+      var shouldArr = [1, 10, 3, [1, 10, [1, 10]]];
+
+      indexes.setIndexPathsOf(tempArr, paths, items);
+
+      assert.deepEqual(shouldArr, tempArr);
+
+    });
+
+    it('should return [1, 10, 3, [1, 11, [1, 12]]]', function () {
+
+      var tempArr = [1, 2, 3, [1, 2, [1, 5]]];
+      var paths = [[1], [3, 1], [3, 2, 1]];
+      var items = [10, 11, 12];
+
+      var shouldArr = [1, 10, 3, [1, 11, [1, 12]]];
+
+      indexes.setIndexPathsOf(tempArr, paths, items);
+
+      assert.deepEqual(shouldArr, tempArr);
+
+    });
+
+  });
+
 });
