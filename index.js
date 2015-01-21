@@ -111,8 +111,23 @@ function setIndexPathsOf(arr, paths, items) {
 
 }
 
+function setIndexesOf(arr, paths, items) {
+
+  if (!Array.isArray(items)) {
+    var item = items;
+    items = [];
+    for (var i = 0, l = paths.length; i < l; i++) { items.push(item) };
+  }
+
+  for (var i = 0; i < paths.length; i++) {
+    arr[paths[i]] = items[i];
+  }
+
+}
+
 module.exports.indexPathOf = indexPathOf;
 module.exports.indexPathsOf = indexPathsOf;
 module.exports.indexesOf = indexesOf;
 module.exports.setIndexPathOf = setIndexPathOf;
 module.exports.setIndexPathsOf = setIndexPathsOf;
+module.exports.setIndexesOf = setIndexesOf;
