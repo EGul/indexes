@@ -137,4 +137,35 @@ describe('indexes', function () {
 
   });
 
+  describe('setIndexesOf', function () {
+
+    it('should return [10, 2, 11, 12, 13]', function () {
+
+      var tempArr = [1, 2, 3, 4, 5];
+      var paths = [0, 2, 3, 4];
+      var items = [10, 11, 12, 13];
+
+      var shouldArr = [10, 2, 11, 12, 13];
+
+      indexes.setIndexesOf(tempArr, paths, items);
+
+      assert.deepEqual(shouldArr, tempArr);
+
+    });
+
+    it('should return [10, 2, 10, 10, 10]', function () {
+
+      var tempArr = [1, 2, 3, 4, 5];
+      var paths = [0, 2, 3, 4];
+
+      var shouldArr = [10, 2, 10, 10, 10];
+
+      indexes.setIndexesOf(tempArr, paths, 10);
+
+      assert.deepEqual(shouldArr, tempArr);
+
+    });
+
+  });
+
 });
