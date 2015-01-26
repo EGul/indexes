@@ -17,7 +17,7 @@ Get first index path of item
 ###indexPathsOf(arr, item)
 Get index paths of item
 
-###indexes(arr, item)
+###indexesOf(arr, item)
 Get indexes of item
 
 ###setIndexPathOf(arr, path, item)
