@@ -78,7 +78,7 @@ function indexesOf(arr, item) {
 
   var results = [];
 
-  for (var i = 0; i < arr.length; i++) {
+  for (var i = 0, l = arr.length; i < l; i++) {
     if (arr[i] == item) results.push(i);
   }
 
