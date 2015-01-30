@@ -1,17 +1,22 @@
 {
   "name": "indexes",
   "version": "1.0.0",
-  "description": "array indexes",
+  "description": "array indexe utilites",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/temp-name-here/indexes.git"
+  },
+  "keywords": [
+    "array",
+    "indexes"
+  ],
   "author": "temp-name-here",
-  "license": "ISC",
-  "dependencies": {
+  "license": "MIT",
+  "devDependencies": {
     "mocha": "^2.1.0"
   }
 }
